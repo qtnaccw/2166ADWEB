@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      declarations: [AppComponent], // Declare AppComponent in the testing module
     }).compileComponents();
   });
 
@@ -22,8 +22,9 @@ describe('AppComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
+    fixture.detectChanges(); // Trigger change detection
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, prelim-exam');
+    // Expect the title text to match the actual content of the h1 element
+    expect(compiled.querySelector('h1.site-heading-lower')?.textContent).toContain('Cafe Expo');
   });
 });
