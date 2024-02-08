@@ -1,0 +1,64 @@
+<div>
+  <h3>Text Format Pipes</h3>
+  <p>Uppercase: {{title | uppercase}}</p>
+  <p>Lowercase: {{title | lowercase}}</p>
+  <p>Titlecase: {{title | titlecase}}</p>
+  <p>Slice: {{title | slice:0:7}}</p>
+</div>
+<hr>
+
+<div>
+  <h3>Date Pipes</h3>
+  <p>Today's date (Default): {{presentDate}}</p>
+  <p>Short date: {{presentDate | date: 'shortDate'}}</p>
+  <p>Medium Date: {{presentDate | date: 'mediumDate'}}</p>
+  <p>Long Date: {{presentDate | date: 'longDate'}}</p>
+  <hr>
+  <p>This will show a formatted date: {{presentDate | date: 'M/dd/yyyy'}}</p>
+  <p>This indicates the hours and minutes: {{presentDate | date: 'h:mm'}}</p>
+</div>
+<hr>
+
+<div>
+  <h3>Currency Pipes</h3>
+  <p>Currency:'USD': {{50 | currency: 'USD':'symbol'}}</p>
+  <p>Currency:'EUR': {{50 | currency: 'EUR':'symbol'}}</p>
+  <p>Currency:'GBP': {{50 | currency: 'GBP':'symbol'}}</p>
+  <p>Currency:'JPY': {{50 | currency: 'JPY':'symbol'}}</p>
+</div>
+<hr>
+
+<div>
+  <h3>Decimal Pipes</h3>
+  <p>Number:'1.2-3': {{3.14159265359 | number:'1.2-3'}}</p>
+  <p>Number:'3.1-2': {{3.14159265359 | number:'3.1-2'}}</p>
+  <p>Number:'3.0-0': {{3.14159265359 | number:'3.0-0'}}</p>
+  <p>Number:'4.0-0': {{3.14159265359 | number:'4.0-0'}}</p>
+</div>
+<hr>
+
+<div>
+  <h3>Json Pipes</h3>
+  <p>Object: {{dataObject | json}}</p>
+  <p>Array: {{dataArray | json}}</p>
+  <p>JSON String: {{jsonString | json}}</p>
+  <p>Null Value: {{nullValue | json}}</p>
+</div>
+<hr>
+  
+<div>
+  <h3>Percent Pipes</h3>
+  <p>percent: {{ 0.75 | percent }}</p>
+  <p>percent:'2.2-2': {{ 0.7523 | percent:'2.2-2'}}</p>
+  <p>percent:'2.0-0': {{ 0.75 | percent:'2.0-0'}}</p>
+  <p>percent:'3.0-0': {{ 0.75 | percent:'3.0-0'}}</p>
+</div>
+<hr>
+
+<div>
+  <h3>Slice Pipes</h3>
+  <p>slice:0:5: {{'Angular Pipes' | slice:0:7}}</p>
+  <p>slice:6:11: {{'Angular Pipes' | slice:6:11}}</p>
+  <p>slice:0:3: {{'Angular Pipes' | slice:0:3}}</p>
+  <p>slice:-5: {{'Angular Pipes' | slice:-5}}</p>
+</div>
