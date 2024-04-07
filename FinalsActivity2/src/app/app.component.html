@@ -1,0 +1,44 @@
+
+<div class="a">
+  <h1>Finals LAB ACTIVITY 2: Integrate Angular Material on CRUD (Using Localhost)<br>Ferjin Anne Uy</h1>
+  </div>
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  
+      <ul>
+      
+        <li>
+          <a routerLink="/add-book" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Add Books</a>
+        </li>
+        <li>
+          <a routerLink="/books-list" routerLinkActive="active">Show Books</a>
+        </li>
+        <li>
+          <a routerLink="/buttons" routerLinkActive="active"[routerLinkActiveOptions]={exact:true}>Buttons</a>
+        </li>
+        <li>
+          <a routerLink="/grid" routerLinkActive="active"[routerLinkActiveOptions]={exact:true}>Grid</a>
+        </li>
+      </ul>
+  
+  
+  
+</nav>
+
+
+
+<!-- <nav class="bg-white border-gray-200 dark:bg-gray-900">
+ 
+  <div id="navbarNav" class="collapse navbar-collapse">
+    <ul>
+      <li>
+        <a class="nav-link" routerLinkActive="active" routerLink="/books-list">Show Books</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLinkActive="active" routerLink="/add-book">Add Books</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<router-outlet></router-outlet>

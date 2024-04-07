@@ -1,0 +1,36 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; /* Black background */
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white; /* White text */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #FFFFFF; /* White background on hover */
+  color: black; /* Black text on hover */
+}
+
+div.a {
+  text-align: center;
+}
+
+h1 {
+  background-color: #FFFFFF; /* White background */
+  color: #000000; /* Black text */
+  font-size: larger;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,22 @@
+<h1 style="color: black;">Best Avenger of all time</h1>
+
+<div class="pick" style="background-color: black;">
+    <label id="example-radio-group-label" style="color: white;">Pick your favorite Marvel Avengers</label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="favoriteMarvel"
+      (change)="showSnackbar()">
+      <mat-radio-button *ngFor="let Marvel of Marvels" class="example-radio-button" [value]="Marvel" style="color: white;">
+        {{Marvel}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div style="color: white;">Your favorite Marvel is: <span class="selected-Marvel">{{ favoriteMarvel }}</span></div>
+</div>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile><img src="https://cdn.marvel.com/content/1x/004tho_ons_mas_mob_04.jpg" alt="Image 1"></mat-grid-tile>
+    <mat-grid-tile><img src="https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg" alt="Image 2"></mat-grid-tile>
+    <mat-grid-tile><img src="https://images.immediate.co.uk/production/volatile/sites/3/2019/07/avengers-8bb66cd.jpg?quality=90&resize=727,485" alt="Image 3"></mat-grid-tile>
+    <mat-grid-tile><img src="https://assetsio.reedpopcdn.com/Steve-Rogers-Cap.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="Image 4"></mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,33 @@
+<div class="row justify-content-center mt-5">
+  <div class="mb-5">
+      <form class="max-w-sm mx-auto white-theme" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <div class="mb-2">
+          <label class="white-text">Title</label>
+          <input class="form-control white-input" type="text" formControlName="title" required>
+        </div>
+
+        <div class="mb-2">
+          <label class="white-text">Price</label>
+          <input class="form-control white-input" type="text" formControlName="price" required>
+        </div>
+ 
+        <div class="mb-2">
+          <label class="white-text">Description</label>
+          <input class="form-control white-input" type="text" formControlName="description" required>
+        </div>
+        <div class="mb-2">
+          <mat-chip-listbox aria-label="Book type" formControlName="book_type">
+            <mat-chip-option class="white-text">Local Author</mat-chip-option>
+            <mat-chip-option class="white-text">Foreign Author</mat-chip-option>
+          </mat-chip-listbox>
+        </div>
+        
+        <div class="mb-2">
+          <button class="text-black bg-white hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-900" type="submit">Add Book</button>
+        </div>
+        
+      </form>
+  </div>
+</div>
+
+
