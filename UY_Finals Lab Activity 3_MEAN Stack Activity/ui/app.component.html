@@ -1,0 +1,136 @@
+<!-- <p>Ferj's Libary</p>
+
+<input id="newBook" placeholder="Title">
+<input id="newDesc" placeholder="Description">
+<input id="newPrice" placeholder="Book price">
+<button (click)="addBook()">Add book</button>
+
+<h3 *ngFor="let book of books">
+  <b> {{book.title}}</b>
+  <b> | {{book.description}}</b>
+  <b> | {{book.price}} </b>  
+  <button (click)="deleteBook(book.id)">Delete book</button>
+</h3> -->
+
+<title>Library App</title>
+    <style>
+        /* Basic styling for the app */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Styling for the library title */
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+        }
+
+        /* Styling for the form container */
+        .form-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Styling for form inputs */
+        input {
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 80%;
+            max-width: 400px;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        /* Styling for form button */
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #df2c5f;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            width: 80%;
+            max-width: 400px;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the book grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        /* Styling for each book item */
+        .book-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Styling for book details within the item */
+        .book-details {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for delete button */
+        .delete-button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #df2c5f;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .delete-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<body>
+    <div class="form-container">
+        <!-- Form to add new books -->
+        <input id="newBook" placeholder="Title">
+        <br>
+        <input id="newDesc" placeholder="Description">
+        <br>
+        <input id="newPrice" placeholder="Book price">
+        <br>
+        <button (click)="addBook()">Add book</button>
+    </div>
+
+    <hr>
+    
+    <h1>Ferj's Library</h1>
+    
+    <hr>
+
+    <div class="book-grid">
+        <!-- Displaying books in a grid layout -->
+        <div *ngFor="let book of books" class="book-item">
+            <div class="book-details">
+                <b>{{book.title}}</b><br>
+                <span>{{book.description}}</span><br>
+                <span>{{book.price}}</span>
+            </div>
+            <button class="delete-button" (click)="deleteBook(book.id)">Delete</button>
+        </div>
+    </div>
+
+    <!-- Angular script references (not shown here) -->
+</body>
